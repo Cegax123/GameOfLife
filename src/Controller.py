@@ -1,10 +1,11 @@
 import pygame
-from ConwayGUI import GoLGUI
+from ConwayGUI import GUI
+
 
 class Controller:
     def __init__(self, board, WIN, game):
         self.board = board
-        self.gui = GoLGUI(WIN, board, self)
+        self.gui = GUI(WIN, board, self)
         self.game = game
 
     def get_gui(self):

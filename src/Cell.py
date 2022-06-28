@@ -51,6 +51,7 @@ class Cell:
     def clear_neighbors(self):
         self.neighbors.clear()
 
+
 class CellStatus(Enum):
     DEAD = 0
     LIVE = 1

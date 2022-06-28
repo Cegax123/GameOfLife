@@ -5,6 +5,7 @@ from Controller import Controller
 
 pygame.display.set_caption("Conway's Game of Life")
 
+
 class Game:
     def __init__(self):
         self.WIN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -42,7 +43,8 @@ class Game:
 
     def change_paused_status(self):
         self.paused = not self.paused
-    
+
+
 if __name__ == "__main__":
     game = Game()
     game.run()

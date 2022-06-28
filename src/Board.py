@@ -3,7 +3,7 @@ from Cell import Cell
 
 class Board:
     directions = [(1, 0), (-1, 0), (0, 1), (0, -1),
-                (1, 1), (-1, -1), (-1, 1), (1, -1)]
+                  (1, 1), (-1, -1), (-1, 1), (1, -1)]
 
     def __init__(self, rows, cols, limited_by_wall=True):
         self.rows = rows
@@ -37,7 +37,7 @@ class Board:
                 ny = (ny + self.cols) % self.cols
 
             if not self.valid_position((nx, ny)): continue
-                    
+
             self.get_cell_by_position((x, y)).add_neighbor(self.get_cell_by_position((nx, ny)))
 
     def move_to_next_iteration(self):
@@ -54,13 +54,13 @@ class Board:
 
     def revive_cell_by_position(self, pos):
         if not self.valid_position(pos):
-            return 
+            return
 
         self.get_cell_by_position(pos).revive()
 
     def kill_cell_by_position(self, pos):
         if not self.valid_position(pos):
-            return 
+            return
 
         self.get_cell_by_position(pos).kill()
 

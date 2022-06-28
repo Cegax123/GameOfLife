@@ -2,7 +2,7 @@ import pygame
 from conf import *
 
 
-class GoLGUI:
+class GUI:
     def __init__(self, surf, board, controller):
         self.surf = surf
         self.rows, self.cols = HEIGHT // SCALE, WIDTH // SCALE
