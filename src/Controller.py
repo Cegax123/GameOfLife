@@ -1,5 +1,5 @@
 import pygame
-from ConwayGUI import GUI
+from GUI import GUI
 
 
 class Controller:
