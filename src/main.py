@@ -16,20 +16,18 @@ class Game:
 
         self.board = Board(HEIGHT // SCALE, WIDTH // SCALE)
         self.controller = Controller(self.board, self.WIN, self)
-        self.gui = self.controller.get_gui()
 
     def run(self):
             
         while self.running_game:
             self.clock.tick(FPS)
-
-            self.gui.action_performed(pygame.event.get())
+            self.controller.action_performed_in_view(pygame.event.get())
 
             if not self.paused:
                 self.controller.move_board_to_next_iteration()
 
             self.WIN.fill(COLOR_BG)
-            self.gui.draw()
+            self.controller.draw_game()
 
             pygame.display.update()
             

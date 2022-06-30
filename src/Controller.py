@@ -8,6 +8,9 @@ class Controller:
         self.gui = GUI(WIN, board, self)
         self.game = game
 
+    def draw_game(self):
+        self.gui.draw()
+
     def get_gui(self):
         return self.gui
 
@@ -35,3 +38,6 @@ class Controller:
 
     def right_clicked_cell_with_pos(self, pos):
         self.board.kill_cell_by_position(pos)
+
+    def action_performed_in_view(self, events):
+        self.gui.action_performed(events)
